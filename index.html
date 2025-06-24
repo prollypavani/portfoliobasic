@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="styles.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavani's </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+  <div class="nav-container">
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+    <section id="home">
+      
+           <div class="hero-content">
+            <h1> Hey, I'm Pavani </h1>
+            <p>I convert caffeine into code & algorithms, and edge cases into punchlines.</p>
+              <a href="#about" class="scroll-down">
+              ↓ Scroll Down
+            </a>
+           </div>
+           </section>
+           <section id="about">
+           <div class="about-container">
+             <h2>About Me</h2>
+             <div class="about-card slide-in">
+             <p>
+             I'm Pavani — a logic-loving human who genuinely thinks debugging is just code’s way of playing hide-and-seek. I spend most of my time knee-deep in DSA problems, occasionally questioning my life choices, then solving a tricky problem and feeling like a genius again. When I’m not coding, I’m either nose-deep in a twisty thriller novel (the kind that keeps you suspicious of your toaster) or dancing to Bollywood songs like I’m the main character. I like my algorithms efficient, my playlists dramatic, and my coffee strong enough to compile itself.
+             </p>
+             </div>
+            </div>
+        </section>
+        <section id="skills">
+  <div class="skills-container">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card slide-in"><i class="fas fa-code"></i> C++</div>
+      <div class="skill-card slide-in"><i class="fab fa-java"></i> Java</div>
+      <div class="skill-card slide-in"><i class="fab fa-html5"></i> HTML & CSS</div>
+      <div class="skill-card slide-in"><i class="fas fa-brain"></i> DSA</div>
+      <div class="skill-card slide-in"><i class="fas fa-lightbulb"></i> Problem Solving</div>
+      <div class="skill-card slide-in"><i class="fas fa-paint-brush"></i> Creative Thinking</div>
+    </div>
+  </div>
+</section>
+<section id="projects">
+  <div class="projects-container">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card slide-in">
+        <h3>🌐 Portfolio Website</h3>
+        <p>This pastel-themed, scrollable portfolio was handcrafted with HTML, CSS, and a touch of humor. It’s responsive, personal, and built with love (and caffeine).</p>
+        <a href="#" target="_blank">🔗 View Live</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="contact-container">
+    <p>Wanna talk code, collab, or just share your favorite thriller plot twist?</p>
+    <h2>Contact Me</h2>
+    <div class="contact-links">
+      <a href="mailto:agarwalpavani2024@gmail.com" target="_blank" class="slide-in">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="https://leetcode.com/u/pavaniii_/" target="_blank" class="slide-in">
+        <i class="fas fa-code"></i> LeetCode
+      </a>
+      <a href="#" target="_blank" class="slide-in">
+        <i class="fab fa-linkedin"></i> LinkedIn (coming soon!)
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+  const sliders = document.querySelectorAll('.slide-in');
+
+  const slideInOnScroll = () => {
+    sliders.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const showAt = window.innerHeight * 0.85;
+
+      if (rect.top < showAt) {
+        el.classList.add('visible');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', slideInOnScroll);
+  window.addEventListener('load', slideInOnScroll);
+</script>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+
+</body>
+</html>
